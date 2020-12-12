@@ -29,7 +29,7 @@ const HomePage = () => {
             from: 'Luis <matchmakingtech@gmail.com>',
             to: `${email}, luisglopez7777@gmail.com`,
             subject: 'Luis de Matchmaking',
-            text: 'Hola! \n\nGracias por tu interés. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
+            text: 'Hola! \n\nGracias por tu interés en Matchmaking. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
         }
         try {
             const response = await axios.post("/api/email", info);
