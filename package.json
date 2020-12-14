@@ -4,9 +4,9 @@
   "description": "landing page",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/index.js",
+    "dev": "nodemon server",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server"
   },
   "author": "luisglopez7777",
   "license": "ISC",
