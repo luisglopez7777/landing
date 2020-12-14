@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
 import { MdSecurity, MdImportantDevices, MdAutorenew } from "react-icons/md";
@@ -42,6 +43,14 @@ const HomePageEnglish = () => {
 
     return (
         <div>
+            <Head>
+                <title>Matchmaking Technologies</title>
+                <meta name="description" content="Change the way tennis is played at your club. Have a social network of tennis players, sign up for tournaments, position yourself in the ranking, and much more!" />
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="index,follow" />
+                {/* <link rel="manifest" href="./public/manifest.json" /> */}
+            </Head>
             <header>
                 <nav>
                     <ul className="main-nav">
@@ -53,7 +62,7 @@ const HomePageEnglish = () => {
                 </nav>
             </header>
 
-            <div className="landing">
+            <main className="landing">
                 <div className="top-container">
                     <div className="landing-left">
                         <h1>We want to change the way tennis is played in your club</h1>
@@ -83,7 +92,7 @@ const HomePageEnglish = () => {
                     </div>
 
                     <div className="landing-right">
-                        <iframe src="https://www.youtube.com/embed/XD3IjoDBPW0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe title="App explained" src="https://www.youtube.com/embed/XD3IjoDBPW0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 </div>
 
@@ -126,7 +135,7 @@ const HomePageEnglish = () => {
                     </div>
                 </div>
 
-            </div>
+            </main>
         </div>
     )
 }

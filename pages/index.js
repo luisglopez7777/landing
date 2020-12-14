@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
 import { MdSecurity, MdImportantDevices, MdAutorenew } from "react-icons/md";
@@ -42,6 +43,14 @@ const HomePage = () => {
 
     return (
         <div>
+            <Head>
+                <title>Matchmaking Technologies</title>
+                <meta name="description" content="Cambia la forma en que se juega tenis en tu club. Ten una red social de tenistas, inscríbete a torneos, posicionate en el ranking y mucho mas!" />
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="index,follow" />
+                {/* <link rel="manifest" href="/public/manifest.json" /> */}
+            </Head>
             <header>
                 <nav>
                     <ul className="main-nav">
@@ -53,7 +62,7 @@ const HomePage = () => {
                 </nav>
             </header>
 
-            <div className="landing">
+            <main className="landing">
                 <div className="top-container">
                     <div className="landing-left">
                         <h1>Queremos cambiar la forma en la que se juega tenis en tu club</h1>
@@ -82,7 +91,7 @@ const HomePage = () => {
                     </div>
 
                     <div className="landing-right">
-                        <iframe src="https://www.youtube.com/embed/nQ3T1ke-g38" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe title="Explicacion de App" src="https://www.youtube.com/embed/nQ3T1ke-g38" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 </div>
 
@@ -124,10 +133,42 @@ const HomePage = () => {
 
                     </div>
                 </div>
-            </div>
+            </main>
         </div >
     )
 }
 
 export default HomePage
 
+
+// import Document, { Html, Head, Main, NextScript, Meta } from 'next/document'
+
+// class MyDocument extends Document {
+//     // static async getInitialProps(ctx) {
+//     //     const initialProps = await Document.getInitialProps(ctx)
+//     //     return { ...initialProps }
+//     // }
+
+//     render() {
+//         return (
+//             <Html>
+//                 <Head>
+//                     {/* <>
+//                         <meta charset="UTF-8" />
+//                         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//                         <title>Matchmaking Technologies</title>
+//                         <meta name="description" content="Cambia la forma en que se juega tenis en tu club. Ten una red social de tenistas, inscríbete a torneos, posicionate en el ranking y mucho mas!" />
+//                         <meta name="robots" content="index,follow" />
+//                     </> */}
+//                     {/* <title>Match</title> */}
+//                 </Head >
+//                 <body>
+//                     <Main />
+//                     <NextScript />
+//                 </body>
+//             </Html>
+//         )
+//     }
+// }
+
+// export default MyDocument
