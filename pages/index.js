@@ -13,6 +13,7 @@ const HomePage = () => {
     const [errorMessage, setErrorMessage] = useState(null);
 
 
+
     function validateEmail(valor) {
         setState("LOADING")
         let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -41,6 +42,7 @@ const HomePage = () => {
         }
     }
 
+
     return (
         <div>
             <Head>
@@ -49,7 +51,6 @@ const HomePage = () => {
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index,follow" />
-                {/* <link rel="manifest" href="/public/manifest.json" /> */}
             </Head>
             <header>
                 <nav>
@@ -68,7 +69,9 @@ const HomePage = () => {
                         <h1>Queremos cambiar la forma en la que se juega tenis en tu club</h1>
                         <p>Dejános tu correo para ponernos en contacto</p>
                         <div className="email">
-                            <input type="email" autoComplete="email" placeholder="Tu correo" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <label for="email">
+                                <input type="email" name="email" autoComplete="email" placeholder="Tu correo" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </label>
                             <span>
                                 <button
                                     disabled={state === "LOADING"}

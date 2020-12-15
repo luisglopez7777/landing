@@ -49,7 +49,6 @@ const HomePageEnglish = () => {
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index,follow" />
-                {/* <link rel="manifest" href="./public/manifest.json" /> */}
             </Head>
             <header>
                 <nav>
@@ -67,17 +66,19 @@ const HomePageEnglish = () => {
                     <div className="landing-left">
                         <h1>We want to change the way tennis is played in your club</h1>
                         <p>Write your email so that we can contact you</p>
-                        <div className="email">
-                            <input type="email" autoComplete="email" placeholder="Tu correo" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <form className="email">
+                            <label for="emailEn">
+                                <input type="email" name="emailEn" autoComplete="email" placeholder="Your email" id="emailEn" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </label>
                             <span>
                                 <button
                                     disabled={state === "LOADING"}
                                     onClick={() => validateEmail(email)}
                                 >
-                                    Quiero saber más
+                                    Contact me
                                 </button>
                             </span>
-                        </div>
+                        </form>
                         {state === "LOADING" && (
                             <p>Loading...</p>
                         )}
