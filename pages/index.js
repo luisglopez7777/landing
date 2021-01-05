@@ -67,6 +67,7 @@ const HomePage = () => {
                     <div className="landing-left">
                         {/* <h1>Queremos cambiar la forma en la que se juega tenis en tu club</h1> */}
                         <p>Dejános tu correo para ponernos en contacto</p>
+                        <h3>No funcionananananas</h3>
                         <div className="email">
                             <label for="email">
                                 <input type="email" name="email" autoComplete="email" placeholder="Tu correo" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
