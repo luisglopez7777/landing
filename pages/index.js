@@ -65,7 +65,7 @@ const HomePage = () => {
             <main className="landing">
                 <div className="top-container">
                     <div className="landing-left">
-                        <h1>Queremos cambiar la forma en la que se juega tenis en tu club</h1>
+                        {/* <h1>Queremos cambiar la forma en la que se juega tenis en tu club</h1> */}
                         <p>Dejános tu correo para ponernos en contacto</p>
                         <div className="email">
                             <label for="email">
