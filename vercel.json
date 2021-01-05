@@ -1,6 +1,6 @@
 {
     "env": {
-        "DOMAIN": "@domain_landing",
+        "DOMAIN": "@domain_landing-test",
         "API_BASE_URL": "@api_base_url_landing-test",
         "API_KEY": "@api_key_landing-test"
     }
