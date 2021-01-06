@@ -35,7 +35,7 @@ const HomePage = () => {
         }
         try {
             const response = await axios.post("/api/email", info);
-            console.log(response)
+            console.log('response', response)
             setState("SUCCESS");
         } catch (e) {
             setState("ERROR");
