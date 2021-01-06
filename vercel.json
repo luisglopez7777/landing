@@ -1,6 +1,6 @@
 {
     "env": {
-        "DOMAIN": "@domain_landing-https",
+        "DOMAIN": "@domain_landing-2021",
         "API_BASE_URL": "@api_base_url_landing-2021",
         "API_KEY": "@api_key_landing-2021"
     }
