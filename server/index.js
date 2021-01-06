@@ -1,6 +1,5 @@
 const express = require('express')
 const next = require('next')
-const cors = require('cors')
 require('dotenv').config()
 const PORT = process.env.PORT || 4000
 const dev = process.env.NODE_ENV !== 'production'
@@ -12,7 +11,6 @@ app.prepare()
     .then(() => {
         const server = express()
         server.use(express.json())
-        server.use(cors())
         const showRoutes = require('./routes/index.js')
 
         server.use('/api', showRoutes)
