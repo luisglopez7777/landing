@@ -1,7 +1,7 @@
 const express = require('express')
 const next = require('next')
 require('dotenv').config()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 const dev = process.env.NODE_ENV !== 'production'
 // const app = next({ dev })
 const app = next({ dev })
@@ -29,3 +29,5 @@ app.prepare()
         console.error(ex.stack)
         process.exit(1)
     })
+
+    // "start": "NODE_ENV=production node server"

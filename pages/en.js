@@ -43,13 +43,10 @@ const HomePageEnglish = () => {
 
     return (
         <div>
-            {/* <Head>
+            <Head>
                 <title>Matchmaking Technologies</title>
                 <meta name="description" content="Change the way tennis is played at your club. Have a social network of tennis players, sign up for tournaments, position yourself in the ranking, and much more!" />
-                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta name="robots" content="index,follow" />
-            </Head> */}
+            </Head>
             <header>
                 <nav>
                     <ul className="main-nav">
@@ -67,7 +64,7 @@ const HomePageEnglish = () => {
                         <h1>We want to change the way tennis is played in your club</h1>
                         <p>Write your email so that we can contact you</p>
                         <form className="email">
-                            <label for="emailEn">
+                            <label htmlFor="emailEn">
                                 <input type="email" name="emailEn" autoComplete="email" placeholder="Your email" id="emailEn" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </label>
                             <span>

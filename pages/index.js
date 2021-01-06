@@ -29,12 +29,13 @@ const HomePage = () => {
         setErrorMessage(null);
         let info = {
             from: 'Luis <matchmakingtech@gmail.com>',
-            to: `${email}, luisglopez7777@gmail.com`,
+            to: `${email}, luisglopez7777@gmail.com, matchmakingtech@gmail.com>`,
             subject: 'Luis de Matchmaking',
             text: 'Hola! \n\nGracias por tu interés en Matchmaking. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
         }
         try {
             const response = await axios.post("/api/email", info);
+            console.log(response)
             setState("SUCCESS");
         } catch (e) {
             setState("ERROR");
@@ -42,9 +43,41 @@ const HomePage = () => {
         }
     }
 
+    // function validateEmail(valor) {
+    //     setState("LOADING")
+    //     let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    //     if (valor.match(pattern)) {
+    //         subscribe(valor)
+    //     } else {
+    //         setState("ERROR")
+    //         setErrorMessage('Correo inválido. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
+    //     }
+    // }
+
+    // const subscribe = async (correo) => {
+    //     setErrorMessage(null);
+    //     let info = {
+    //         from: 'Luis <matchmakingtech@gmail.com>',
+    //         to: `${correo}, luisglopez7777@gmail.com`,
+    //         subject: 'Luis de Matchmaking',
+    //         text: 'Hola! \n\nGracias por tu interés en Matchmaking. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
+    //     }
+    //     try {
+    //         await axios.post("/api/email", info);
+    //         setState("SUCCESS");
+    //     } catch (e) {
+    //         setState("ERROR");
+    //         setErrorMessage('Uuups... Algo salió mal. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
+    //     }
+    // }
+
 
     return (
         <div>
+            <Head>
+                <title>Matchmaking Technologies</title>
+                <meta name="description" content="Cambia la forma en que se juega tenis en tu club. Ten una red social de tenistas, inscríbete a torneos, posicionate en el ranking y mucho mas!" />
+            </Head>
             <header>
                 <nav>
                     <ul className="main-nav">
@@ -62,7 +95,7 @@ const HomePage = () => {
                         <h1>Queremos cambiar la forma en la que se juega tenis en tu club</h1>
                         <p>Dejános tu correo para ponernos en contacto</p>
                         <div className="email">
-                            <label for="email">
+                            <label htmlFor="email">
                                 <input type="email" name="email" autoComplete="email" placeholder="Tu correo" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </label>
                             <span>
@@ -135,36 +168,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-
-// import Document, { Html, Head, Main, NextScript, Meta } from 'next/document'
-
-// class MyDocument extends Document {
-//     // static async getInitialProps(ctx) {
-//     //     const initialProps = await Document.getInitialProps(ctx)
-//     //     return { ...initialProps }
-//     // }
-
-//     render() {
-//         return (
-//             <Html>
-//                 <Head>
-//                     {/* <>
-//                         <meta charset="UTF-8" />
-//                         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//                         <title>Matchmaking Technologies</title>
-//                         <meta name="description" content="Cambia la forma en que se juega tenis en tu club. Ten una red social de tenistas, inscríbete a torneos, posicionate en el ranking y mucho mas!" />
-//                         <meta name="robots" content="index,follow" />
-//                     </> */}
-//                     {/* <title>Match</title> */}
-//                 </Head >
-//                 <body>
-//                     <Main />
-//                     <NextScript />
-//                 </body>
-//             </Html>
-//         )
-//     }
-// }
-
-// export default MyDocument
