@@ -37,7 +37,7 @@ const HomePage = () => {
             setState("SUCCESS");
         } catch (e) {
             setState("ERROR");
-            console.log(e)
+            console.log('error', e)
             setErrorMessage('Uuups... Algo salió mal. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
         }
     }
