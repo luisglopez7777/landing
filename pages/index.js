@@ -29,7 +29,7 @@ const HomePage = () => {
         setErrorMessage(null);
         let info = {
             from: 'Luis <matchmakingtech@gmail.com>',
-            to: `${email}, luisglopez7777@gmail.com, matchmakingtech@gmail.com>`,
+            to: `${email}, luisglopez7777@gmail.com`,
             subject: 'Luis de Matchmaking',
             text: 'Hola! \n\nGracias por tu interés en Matchmaking. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
         }
@@ -42,35 +42,6 @@ const HomePage = () => {
             setErrorMessage('Uuups... Algo salió mal. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
         }
     }
-
-    // function validateEmail(valor) {
-    //     setState("LOADING")
-    //     let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    //     if (valor.match(pattern)) {
-    //         subscribe(valor)
-    //     } else {
-    //         setState("ERROR")
-    //         setErrorMessage('Correo inválido. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
-    //     }
-    // }
-
-    // const subscribe = async (correo) => {
-    //     setErrorMessage(null);
-    //     let info = {
-    //         from: 'Luis <matchmakingtech@gmail.com>',
-    //         to: `${correo}, luisglopez7777@gmail.com`,
-    //         subject: 'Luis de Matchmaking',
-    //         text: 'Hola! \n\nGracias por tu interés en Matchmaking. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
-    //     }
-    //     try {
-    //         await axios.post("/api/email", info);
-    //         setState("SUCCESS");
-    //     } catch (e) {
-    //         setState("ERROR");
-    //         setErrorMessage('Uuups... Algo salió mal. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
-    //     }
-    // }
-
 
     return (
         <div>

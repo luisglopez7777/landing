@@ -11,9 +11,9 @@ router.post("/email", (req, res) => {
     const mg = mailgun({ apiKey: API_KEY, domain: DOMAIN });
     mg.messages().send(data, function (error, body) {
         if (error) {
-            res.send(error)
+            res.send('error')
         } else {
-            res.send('Success')
+            res.send('success')
         }
     })
 })
