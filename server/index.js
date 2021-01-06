@@ -29,5 +29,3 @@ app.prepare()
         console.error(ex.stack)
         process.exit(1)
     })
-
-    // "start": "NODE_ENV=production node server"

@@ -12,8 +12,6 @@ const HomePage = () => {
     const [state, setState] = useState("IDLE");
     const [errorMessage, setErrorMessage] = useState(null);
 
-
-
     function validateEmail(valor) {
         setState("LOADING")
         let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
