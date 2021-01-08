@@ -9,8 +9,8 @@ const API_KEY = process.env.API_KEY
 router.post("/email", (req, res) => {
     let data = req.body
     const mg = mailgun({ apiKey: API_KEY, domain: DOMAIN });
-    // mg.messages().send(data, function (error, body) {
-    res.send(data, function (error, body) {
+    mg.messages().send(data, function (error, body) {
+        // res.send(data, function (error, body) {
         if (error) {
             res.send(error)
         } else {
