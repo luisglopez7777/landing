@@ -19,7 +19,7 @@ const dev = () => {
             <div className="top-container">
                 <div className="landing-left">
                     <h1>Explanation of the app from a developer point of view</h1>
-                    <p>We believe that having a modern software is the best competitive advantage you club can have</p>
+                    <p>We believe that having a modern software is the best competitive advantage your club can have</p>
                 </div>
 
                 <div className="landing-right">
