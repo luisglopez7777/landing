@@ -62,6 +62,8 @@
     width: 560px;
     height: 315px; 
     border: none;
+    max-width: 95%;
+    max-height: 95%
  }
 
  .main-nav{
@@ -71,11 +73,15 @@
     display: flex;
     justify-content: space-between;
  }
+
+ .main-nav-right{
+     /* display: block; */
+    display: inline-flex;
+ }
   
  .main-nav__item{
     display: inline-block;
- }
- 
+ } 
  
  .top-container{
      display: grid;
@@ -161,16 +167,20 @@
         margin: 10px auto;
     }
 
+    li p {
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
     .top-container{
         display: flex;
         flex-direction: column-reverse;
     }
 
-
     .landing-right{
         display: flex;
         justify-content: center;
-        margin: 20px 100px;
+        /* margin: 20px 100px; */
     }
     .landing-left{
         margin: 20px 100px;
@@ -214,6 +224,7 @@
         width: 320px;
         height: 180px;
     }
+
 
     .top-container{
         margin: 3% 30px 0px 30px;

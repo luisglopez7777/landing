@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import axios from 'axios'
 import { MdSecurity, MdImportantDevices, MdAutorenew } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
 import { GrMoney } from "react-icons/gr";
 import { DiReact } from "react-icons/di";
+import Navbar from '../components/Navbar'
 
 const HomePageEnglish = () => {
     const [email, setEmail] = useState("");
@@ -47,7 +47,7 @@ const HomePageEnglish = () => {
                 <title>Matchmaking Technologies</title>
                 <meta name="description" content="Change the way tennis is played at your club. Have a social network of tennis players, sign up for tournaments, position yourself in the ranking, and much more!" />
             </Head>
-            <header>
+            {/* <header>
                 <nav>
                     <ul className="main-nav">
                         <li className="main-nav__item"> <h2>Matchmaking Technologies</h2></li>
@@ -56,7 +56,8 @@ const HomePageEnglish = () => {
                         </Link>
                     </ul>
                 </nav>
-            </header>
+            </header> */}
+            <Navbar version="Español" refTo="/" />
 
             <main className="landing">
                 <div className="top-container">
