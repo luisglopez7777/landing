@@ -97,7 +97,7 @@ const HomePage = () => {
                     </div>
 
                     <div className="landing-right">
-                        <iframe title="Explicacion de App" src="https://www.youtube.com/embed/nQ3T1ke-g38" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe title="Explicacion de App" src="https://www.youtube.com/embed/oXGwjfMephw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 </div>
 
