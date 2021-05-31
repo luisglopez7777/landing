@@ -6,6 +6,7 @@ import { FiSettings } from "react-icons/fi";
 import { GrMoney } from "react-icons/gr";
 import { DiReact } from "react-icons/di";
 import Navbar from '../components/Navbar'
+//import { response } from 'express';
 
 const HomePageEnglish = () => {
     const [email, setEmail] = useState("");
@@ -33,8 +34,8 @@ const HomePageEnglish = () => {
             text: 'Hello! \n\nThanks for your interest in Matchmaking. We will contact you as soon as possible.\n\nGreetings, Luis G'
         }
         try {
-            const response = await axios.post("/api/email", info);
-            setState("SUCCESS");
+            const answer = await axios.post("/api", info);
+            setState(answer.data.message);
         } catch (e) {
             setState("ERROR");
             setErrorMessage('Ooops... Something went wrong. Send us an email at matchmakingtech@gmail.com and we will contact you')

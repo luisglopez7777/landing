@@ -34,12 +34,10 @@ const HomePage = () => {
             text: 'Hola! \n\nGracias por tu interés en Matchmaking. Pronto nos pondremos en contacto contigo.\n\nSaludos, Luis G'
         }
         try {
-            const response = await axios.post("/api/email", info);
-            console.log('response', response)
-            setState("SUCCESS");
+            const answer = await axios.post("/api", info);
+            setState(answer.data.message);
         } catch (e) {
             setState("ERROR");
-            console.log('error', e)
             setErrorMessage('Uuups... Algo salió mal. Envíanos un correo a matchmakingtech@gmail.com y nos pondremos en contacto')
         }
     }
